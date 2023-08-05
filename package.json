@@ -7,5 +7,18 @@
     "main": "./extension.js",
     "activationEvents": [
         "*"
-    ]
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "brainxx",
+            "extensions": [
+                ".xx"
+            ]
+        }],
+        "grammars": [{
+            "language": "brainxx",
+            "scopeName": "source.brainxx",
+            "path": "./brainxx.tmLanguage.json"
+        }]
+    }
 }
