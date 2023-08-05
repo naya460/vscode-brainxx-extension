@@ -12,6 +12,10 @@
                 {
                     "name": "constant.numeric",
                     "match": "\\$[0-9]+"
+                },
+                {
+                    "name": "invalid",
+                    "match": "\\$"
                 }
             ]
         }
