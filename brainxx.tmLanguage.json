@@ -11,7 +11,11 @@
             "patterns": [
                 {
                     "name": "constant.numeric",
-                    "match": "\\$[0-9]+"
+                    "match": "(?<=\\${1})[0-9]+"
+                },
+                {
+                    "name": "keyword",
+                    "match": "\\${1}(?=[0-9]+)"
                 },
                 {
                     "name": "keyword",
