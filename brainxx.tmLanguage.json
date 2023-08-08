@@ -112,7 +112,15 @@
             "patterns": [
                 {
                     "name": "invalid",
-                    "match": "\\$[=:]*|:[:>]*|#[:>~]*"
+                    "match": "\\$[=:]?"
+                },
+                {
+                    "name": "invalid",
+                    "match": ":[:>]?"
+                },
+                {
+                    "name": "invalid",
+                    "match": "#([:~]|>((([0-9]+):?)?)?)?"
                 },
                 {
                     "name": "comment",
