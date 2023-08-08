@@ -37,6 +37,18 @@
                 {
                     "name": "constant.numeric",
                     "match": "(?<=\\${1})[0-9]+"
+                },
+                {
+                    "name": "constant.numeric",
+                    "match": "(?<=:[:>])[0-9]+"
+                },
+                {
+                    "name": "constant.numeric",
+                    "match": "(?<=#[:>~])[0-9]+"
+                },
+                {
+                    "name": "constant.numeric",
+                    "match": "(?<=(#\\>){1}[0-9]+(:){1})[0-9]+"
                 }
             ]
         },
@@ -56,11 +68,11 @@
             "patterns": [
                 {
                     "name": "keyword.control",
-                    "match": "::[0-9]+"
+                    "match": "::(?=[0-9]+)"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": ":\\>[0-9]+"
+                    "match": ":\\>(?=[0-9]+)"
                 }
             ]
         },
@@ -68,11 +80,15 @@
             "patterns": [
                 {
                     "name": "keyword.control",
-                    "match": "#[:~][0-9]+|#\\<"
+                    "match": "#[:~](?=[0-9]+)|#\\<"
                 },
                 {
                     "name": "entity.name.function",
-                    "match": "#\\>[0-9]+:[0-9]+"
+                    "match": "#\\>(?=[0-9]+(:){1}[0-9]+)"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "(?<=#\\>[0-9]+):(?=[0-9]+)"
                 }
             ]
         },
