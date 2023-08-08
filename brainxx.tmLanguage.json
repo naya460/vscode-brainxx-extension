@@ -10,25 +10,90 @@
         "keywords": {
             "patterns": [
                 {
-                    "name": "constant.numeric",
-                    "match": "(?<=\\${1})[0-9]+"
+                    "include": "#Number"
                 },
                 {
-                    "name": "keyword",
-                    "match": "\\${1}(?=[0-9]+)"
+                    "include": "#Stack"
                 },
+                {
+                    "include": "#Tag"
+                },
+                {
+                    "include": "#Function"
+                },
+                {
+                    "include": "#Control"
+                },
+                {
+                    "include": "#IO"
+                },
+                {
+                    "include": "#Others"
+                }
+            ]
+        },
+        "Number": {
+            "patterns": [
+                {
+                    "name": "constant.numeric",
+                    "match": "(?<=\\${1})[0-9]+"
+                }
+            ]
+        },
+        "Stack": {
+            "patterns": [
                 {
                     "name": "keyword",
                     "match": "[+-]|(\\$([+\\-*/%$#<>|&^~\\[\\]]|=[=<>!]|:[\\^~+\\->]))"
                 },
                 {
-                    "name": "entity.name.function",
-                    "match": "#\\>[0-9]+:[0-9]+|:\\>[0-9]+|[.,]"
-                },
+                    "name": "keyword",
+                    "match": "\\${1}(?=[0-9]+)"
+                }
+            ]
+        },
+        "Tag": {
+            "patterns": [
                 {
                     "name": "keyword.control",
-                    "match": "[:#]:[0-9]+|#[\\<~]|[<>\\[\\]\\@]"
+                    "match": "::[0-9]+"
                 },
+                {
+                    "name": "entity.name.function",
+                    "match": ":\\>[0-9]+"
+                }
+            ]
+        },
+        "Function": {
+            "patterns": [
+                {
+                    "name": "keyword.control",
+                    "match": "#[:~][0-9]+|#\\<"
+                },
+                {
+                    "name": "entity.name.function",
+                    "match": "#\\>[0-9]+:[0-9]+"
+                }
+            ]
+        },
+        "Control": {
+            "patterns": [
+                {
+                    "name": "keyword.control",
+                    "match": "[<>\\[\\]\\@]"
+                }
+            ]
+        },
+        "IO": {
+            "patterns": [
+                {
+                    "name": "entity.name.function",
+                    "match": "[.,]"
+                }
+            ]
+        },
+        "Others": {
+            "patterns": [
                 {
                     "name": "invalid",
                     "match": "\\$[=:]*|:[:>]*|#[:>~]*"
