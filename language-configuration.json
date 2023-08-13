@@ -10,21 +10,35 @@
         [ "[", "]" ],
     ],
     "indentationRules": {
-        "increaseIndentPattern": "\\[|#:[0-9]+$",
-        "decreaseIndentPattern": "\\]|(\\$[0-9]+ *)?#<$",
-        "unIndentedLinePattern": "\\s*"
+        "increaseIndentPattern": "^.*(\\[$|#:[0-9]+).*$",
+        "decreaseIndentPattern": "^.*(\\]$|#<).*$",
+        "unIndentedLinePattern": "^\\s*$"
     },
     "onEnterRules": [
         {
-            "beforeText": "\\[",
+            "beforeText": "^.*\\[[^\\]]*$",
+            "afterText": "^.*\\].*$",
             "action": {
                 "indent": "indentOutdent"
             }
         },
         {
-            "beforeText": "#:[0-9]+",
+            "beforeText": "^.*\\[[^\\]]*$",
+            "action": {
+                "indent": "indent"
+            }
+        },
+        {
+            "beforeText": "^.*#:[0-9]+$",
+            "afterText": "#<.*$",
             "action": {
                 "indent": "indentOutdent"
+            }
+        },
+        {
+            "beforeText": "^.*#:[0-9]+$",
+            "action": {
+                "indent": "indent"
             }
         }
     ]
