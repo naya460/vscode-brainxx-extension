@@ -1,19 +1,17 @@
 {
     "name": "brainxx",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "engines": {
         "vscode": "^1.80.1"
     },
     "main": "./extension.js",
-    "activationEvents": [
-        "onLanguage:brainxx"
-    ],
     "contributes": {
         "languages": [{
             "id": "brainxx",
             "extensions": [
                 ".xx"
-            ]
+            ],
+            "configuration": "./language-configuration.json"
         }],
         "grammars": [{
             "language": "brainxx",

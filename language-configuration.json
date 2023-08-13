@@ -1,0 +1,31 @@
+{
+    "brackets": [
+        [ "[", "]" ],
+    ],
+    "autoClosingPairs": [
+        [ "[", "]" ],
+        [ "#:", "$0 #<" ]
+    ],
+    "surroundingPairs": [
+        [ "[", "]" ],
+    ],
+    "indentationRules": {
+        "increaseIndentPattern": "\\[|#:[0-9]+$",
+        "decreaseIndentPattern": "\\]|(\\$[0-9]+ *)?#<$",
+        "unIndentedLinePattern": "\\s*"
+    },
+    "onEnterRules": [
+        {
+            "beforeText": "\\[",
+            "action": {
+                "indent": "indentOutdent"
+            }
+        },
+        {
+            "beforeText": "#:[0-9]+",
+            "action": {
+                "indent": "indentOutdent"
+            }
+        }
+    ]
+}
