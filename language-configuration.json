@@ -12,7 +12,7 @@
     "indentationRules": {
         "increaseIndentPattern": "^.*((?<!\\$)\\[|#:[0-9]+).*$",
         "decreaseIndentPattern": "^.*((?<!\\$)\\]|#<).*$",
-        "unIndentedLinePattern": "^\\s*$"
+        "unIndentedLinePattern": "^\\s*$|^.*\\[.*\\].*?$"
     },
     "onEnterRules": [
         {
