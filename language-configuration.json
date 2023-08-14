@@ -1,8 +1,8 @@
 {
-    "brackets": [
-        [ "[", "]" ],
-    ],
+    "brackets": [],
+    "colorizedBracketPairs": [],
     "autoClosingPairs": [
+        [ "$[", "" ],
         [ "[", "]" ],
         [ "#:", "$0 #<" ]
     ],
@@ -10,11 +10,17 @@
         [ "[", "]" ],
     ],
     "indentationRules": {
-        "increaseIndentPattern": "^.*(\\[$|#:[0-9]+).*$",
-        "decreaseIndentPattern": "^.*(\\]$|#<).*$",
+        "increaseIndentPattern": "^.*((?<!\\$)\\[|#:[0-9]+).*$",
+        "decreaseIndentPattern": "^.*((?<!\\$)\\]|#<).*$",
         "unIndentedLinePattern": "^\\s*$"
     },
     "onEnterRules": [
+        {
+            "beforeText": "\\$\\[([^\\[]*)$",
+            "action": {
+                "indent": "none"
+            }
+        },
         {
             "beforeText": "^.*\\[[^\\]]*$",
             "afterText": "^.*\\].*$",

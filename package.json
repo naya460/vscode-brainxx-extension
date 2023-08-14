@@ -1,6 +1,6 @@
 {
     "name": "brainxx",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "engines": {
         "vscode": "^1.80.1"
     },
@@ -16,7 +16,10 @@
         "grammars": [{
             "language": "brainxx",
             "scopeName": "source.brainxx",
-            "path": "./brainxx.tmLanguage.json"
+            "path": "./brainxx.tmLanguage.json",
+            "balancedBracketScopes": [
+                ""
+            ]
         }]
     }
 }
