@@ -1,0 +1,6 @@
+<svg width="128px" height="128px" viewBox="0, 0, 128, 128" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="128px" height="128px" fill="#eeeeee" rx="10px" ry="10px" />
+    <text x="50%" y="70%" font-family="arial" font-size="80px" font-weight="bold" fill="#222222" text-anchor="middle" letter-spacing="-8px">
+        bxx
+    </text>
+</svg>

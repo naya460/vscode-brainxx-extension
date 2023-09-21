@@ -1,8 +1,17 @@
 {
     "name": "brainxx",
-    "version": "0.2.4",
+    "displayName": "brainxx",
+    "version": "0.2.5",
     "engines": {
         "vscode": "^1.80.1"
+    },
+    "license": "Apache-2.0",
+    "description": "Highlighting and indentation for brainxx.",
+    "categories": ["Programming Languages"],
+    "icon": "icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/naya460/vscode-brainxx-extension"
     },
     "main": "./extension.js",
     "contributes": {
