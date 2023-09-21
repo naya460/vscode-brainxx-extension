@@ -1,6 +1,7 @@
 {
     "name": "brainxx",
     "displayName": "brainxx",
+    "publisher": "naya460",
     "version": "0.2.5",
     "engines": {
         "vscode": "^1.80.1"
